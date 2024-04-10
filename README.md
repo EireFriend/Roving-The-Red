@@ -1,5 +1,5 @@
 # Roving-The-Red
-permalink: /index.html
+
 Roving The Red is an interface that displays random photos captured by Mars rovers. Users can select from different rovers and view images taken during randomly selected Martian sols.
 
 This project utilizes data from the NASA Mars Rover Photos API.
