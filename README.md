@@ -4,7 +4,7 @@ Roving The Red is an interface that displays random photos captured by Mars rove
 
 This project utilizes data from the NASA Mars Rover Photos API.
 
-IMPORTANT: Provided DEMO_KEY has a limit of 30 requests per hour. A personal API key should be provided from api.nasa.gov for broader access.
+IMPORTANT: Provided DEMO_KEY has a limit of 30 requests per hour. A personal API key should be provided fromhttps://api.nasa.gov for broader access.
 
 On github pages: https://eirefriend.github.io/Roving-The-Red/
 
