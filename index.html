@@ -1,7 +1,3 @@
-<!--Roving The Red-->
-<!-- By EireFriend-->
-<!-- https://github.com/EireFriend -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,7 +94,12 @@ button {
         function fetchPhotoInternal() {
             sol = Math.floor(Math.random() * (maxSols[select] + 1));
             fetch(`https://api.nasa.gov/mars-photos/api/v1/rovers/${select}/photos?api_key=${api_key}&sol=${sol}`)
-                .then(response => response.json())
+                .then(response => {
+                    if(response.status === 429) {
+                        throw new Error('Too Many Requests');
+                    }
+                    return response.json();
+                })
                 .then(photo_request_response => {
                     if (photo_request_response.photos && photo_request_response.photos.length > 0) {
                         const photo_num = photo_request_response.photos.length;
@@ -125,7 +126,15 @@ button {
                         fetchPhoto();
                     }
                 })
-                .catch(error => console.error("Error:", error));
+                .catch(error => {
+                    console.error("Error:", error);
+                    if (error.message === 'Too Many Requests') {
+                        const roverPhoto = document.getElementById('rover-photo');
+                        roverPhoto.src = "placeholder_image.jpg"; // Placeholder image URL
+                        const roverInfoDiv = document.getElementById('rover-info');
+                        roverInfoDiv.innerHTML = "<p>Too many requests. Please try again later.</p>";
+                    }
+                });
         }
 
         // Call fetchPhoto initially to load a photo
