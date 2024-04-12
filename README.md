@@ -8,4 +8,4 @@ IMPORTANT: Provided DEMO_KEY has a limit of 30 requests per hour. A personal API
 
 On github pages: https://eirefriend.github.io/Roving-The-Red/
 
-![screenshot](https://github.com/EireFriend/Roving-The-Red/assets/158257717/49930dca-5069-4a53-aead-5dc0b8f11988)
+![screenshot](https://github.com/EireFriend/Roving-The-Red/assets/158257717/d76e1ead-5bf1-46f5-a7d5-2f77a482c54a)
