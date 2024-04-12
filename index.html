@@ -130,7 +130,7 @@ button {
                     console.error("Error:", error);
                     if (error.message === 'Too Many Requests') {
                         const roverPhoto = document.getElementById('rover-photo');
-                        roverPhoto.src = "placeholder_image.jpg"; // Placeholder image URL
+                        roverPhoto.src = "placeholder_image.jpeg"; // Placeholder image
                         const roverInfoDiv = document.getElementById('rover-info');
                         roverInfoDiv.innerHTML = "<p>Too many requests. Please try again later.</p>";
                     }
