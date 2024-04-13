@@ -29,23 +29,43 @@ button {
 .repo-link {
   color: white;
 }
+#rover-selection {
+  display: flex; /* Stack buttons horizontally on wider screens */
+  justify-content: center;
+}
+#rover-selection .selection-button {
+  margin: 5px; 
+}
+@media only screen and (max-width: 600px) {
+  #rover-selection {
+    flex-direction: column; /* Stack buttons vertically on smaller screens */
+  }
+}
 </style>
 <body>
     <h1>Roving The Red</h1>
     
     <!-- Radio buttons for rover selection -->
     <div id="rover-selection">
-        <input type="radio" id="spirit" name="rover" value="Spirit">
-        <label for="spirit">Spirit(2004-2011)</label>
+        <div class="selection-button">
+            <input type="radio" id="spirit" name="rover" value="Spirit">
+            <label for="spirit">Spirit(2004-2011)</label>
+        </div>
 
-        <input type="radio" id="opportunity" name="rover" value="Opportunity">
-        <label for="opportunity">Opportunity(2004-2018)</label>
+        <div class="selection-button">
+            <input type="radio" id="opportunity" name="rover" value="Opportunity">
+            <label for="opportunity">Opportunity(2004-2018)</label>
+        </div>
 
-        <input type="radio" id="curiosity" name="rover" value="Curiosity">
-        <label for="curiosity">Curiosity(2012-Present)</label>
+        <div class="selection-button">
+            <input type="radio" id="curiosity" name="rover" value="Curiosity">
+            <label for="curiosity">Curiosity(2012-Present)</label>
+        </div>
 
-        <input type="radio" id="perseverance" name="rover" value="Perseverance" checked>
-        <label for="perseverance">Perseverance(2021-Present)</label>
+        <div class="selection-button">
+            <input type="radio" id="perseverance" name="rover" value="Perseverance" checked>
+            <label for="perseverance">Perseverance(2021-Present)</label>
+        </div>
     </div>
     
     <div id="photo-container" style="padding: 10px;">
